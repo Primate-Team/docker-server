@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  mc-server:
+    image: samsonium/paper-mc
+    container_name: paper-server
+    build: ./paper-server/
+    environment:
+      MEMORYSIZE: 2G
+    ports:
+      - "7922:25565"  # server
+      - "25575:25575" # rcon
+    volumes:
+      - ./data/server:/data:rw
+    stdin_open: true
+    tty: true
+volumes:
+  data:
