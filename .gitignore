@@ -1,0 +1,9 @@
+/*
+
+# Dirs
+!/paper-server
+!/admin
+
+# Files
+!/.gitignore
+!/docker-compose.yml
